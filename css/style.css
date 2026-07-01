@@ -407,3 +407,353 @@ footer {
   .manifesto { grid-template-columns: 1fr; padding: 70px 24px; gap: 20px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 12px; align-items: flex-start; }
 }
+
+/* ═══════════════════════════════════════
+   FOOD PAGE TEMPLATE (reusable)
+   ═══════════════════════════════════════ */
+
+/* ── Color Scheme via CSS Variables ──
+   Each food defines its own palette:
+     <body class="food-page food-pidan">
+   Variables cascade to all sections. */
+
+.food-page {
+  --food-primary: #5A4628;
+  --food-accent: #C68A2E;
+  --food-bg: #F5EFE0;
+  --food-bg-alt: #EDE6D4;
+  --food-text: #2A2010;
+  --food-text-soft: #7A6F62;
+  --food-line: rgba(90,70,40,0.15);
+  --food-light: #FAF5E8;
+  --food-hero-bg: var(--food-primary);
+  --food-hero-text: var(--food-light);
+}
+
+.food-page body {
+  background: var(--food-bg);
+}
+
+/* ── Food Hero ── */
+.food-hero {
+  background: var(--food-hero-bg);
+  color: var(--food-hero-text);
+  padding: 120px 56px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.food-hero-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.food-hero-badge {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 20px;
+}
+
+.food-hero h1 {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: var(--food-hero-text);
+}
+
+.food-hero-cn {
+  font-size: 32px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.food-hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  max-width: 400px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.food-hero-right {
+  text-align: right;
+  padding-bottom: 16px;
+}
+
+.food-hero-stat {
+  display: inline-block;
+  text-align: left;
+}
+
+.food-hero-stat-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--food-accent);
+  margin-bottom: 6px;
+}
+
+.food-hero-stat-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── Food decorative bg pattern ── */
+.food-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* ── Food Sections ── */
+.food-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 80px 56px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 80px;
+  align-items: start;
+  border-bottom: 1px solid var(--food-line);
+}
+
+.food-section:last-of-type { border-bottom: none; }
+
+.food-section-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--food-accent);
+  padding-top: 10px;
+  position: sticky;
+  top: 100px;
+}
+
+.food-section-content {
+  min-width: 0;
+}
+
+.food-section-content h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 600;
+  color: var(--food-text);
+  line-height: 1.15;
+  margin: 0 0 24px;
+  letter-spacing: -0.01em;
+}
+
+.food-section-content h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--food-text);
+  margin: 32px 0 12px;
+}
+
+.food-section-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--food-text-soft);
+  margin: 0 0 16px;
+}
+
+.food-section-content p:last-child { margin-bottom: 0; }
+
+/* ── Tight sub-sections (side-by-side layout) ── */
+.food-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.food-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.food-grid-item {
+  border-top: 2px solid var(--food-accent);
+  padding-top: 16px;
+}
+
+.food-grid-item h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--food-text);
+  margin-bottom: 8px;
+}
+
+.food-grid-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--food-text-soft);
+  margin: 0;
+}
+
+/* ── Stats Section ── */
+.food-stats {
+  background: var(--food-bg-alt);
+  border-top: 1px solid var(--food-line);
+  border-bottom: 1px solid var(--food-line);
+  padding: 48px 56px;
+}
+
+.food-stats-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.food-stat {
+  padding: 0 40px;
+  border-right: 1px solid var(--food-line);
+}
+
+.food-stat:first-child { padding-left: 0; }
+.food-stat:last-child { border-right: none; }
+
+.food-stat-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--food-primary);
+  margin-bottom: 4px;
+}
+
+.food-stat-label {
+  font-size: 13px;
+  color: var(--food-text-soft);
+}
+
+/* ── Myth Buster Grid ── */
+.food-myth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.food-myth-card {
+  padding: 28px;
+  border: 1px solid var(--food-line);
+  border-radius: 3px;
+  background: var(--food-bg-alt);
+}
+
+.food-myth-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.food-myth-label.myth {
+  color: #C0392B;
+}
+
+.food-myth-label.fact {
+  color: #27AE60;
+}
+
+.food-myth-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--food-text-soft);
+  margin: 0;
+}
+
+/* ── Pull Quote ── */
+.food-quote {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 60px 56px 80px;
+  text-align: center;
+}
+
+.food-quote blockquote {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(24px, 2.8vw, 40px);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--food-primary);
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.food-quote cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  font-style: normal;
+  color: var(--food-text-soft);
+  letter-spacing: 0.06em;
+}
+
+/* ── Back link ── */
+.food-back {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 56px 60px;
+}
+
+.food-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--food-text-soft);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color .2s;
+}
+
+.food-back a:hover {
+  color: var(--food-accent);
+}
+
+/* ── Food Page Footer ── */
+.food-page footer {
+  border-top-color: var(--food-line);
+  background: var(--food-bg);
+}
+
+.food-page .footer-logo span { color: var(--food-accent); }
+
+/* ── Food Page Responsive ── */
+@media (max-width: 900px) {
+  .food-hero { padding: 100px 24px 60px; }
+  .food-hero-inner { grid-template-columns: 1fr; gap: 30px; }
+  .food-hero-right { text-align: left; }
+  .food-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 16px; }
+  .food-section-label { position: static; }
+  .food-grid-2, .food-grid-3, .food-myth-grid { grid-template-columns: 1fr; }
+  .food-stats { padding: 32px 24px; }
+  .food-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .food-stat { border-right: none; padding: 0; }
+  .food-quote { padding: 40px 24px 60px; }
+  .food-back { padding: 0 24px 40px; }
+}
