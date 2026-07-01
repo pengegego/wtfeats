@@ -6,18 +6,153 @@
 <title>Century Egg · 皮蛋 — WTFeats</title>
 <link rel="stylesheet" href="../css/style.css">
 <style>
-  /* 皮蛋专属配色 — 换食物只需改这里 */
+  /* ═══════════════════════════════════
+     皮蛋 — 深琥珀 · 墨绿 · 黑
+     神秘 · 高级 · 时间沉淀
+     ═══════════════════════════════════ */
   .food-pidan {
-    --food-primary: #5A4628;
-    --food-accent: #C68A2E;
-    --food-bg: #F5EFE0;
-    --food-bg-alt: #EDE6D4;
-    --food-text: #2A2010;
-    --food-text-soft: #7A6F62;
-    --food-line: rgba(90,70,40,0.15);
-    --food-light: #FAF5E8;
-    --food-hero-bg: #5A4628;
-    --food-hero-text: #FAF5E8;
+    --food-primary: #C4956A;
+    --food-accent: #C4956A;
+    --food-bg: #141110;
+    --food-bg-alt: #1C1715;
+    --food-text: #D4C8B8;
+    --food-text-soft: #9A8E7E;
+    --food-line: rgba(196,149,106,0.1);
+    --food-light: #E8DCC8;
+    --food-hero-bg: #0A0807;
+    --food-hero-text: #C4956A;
+  }
+
+  /* ── Dark theme overrides ── */
+  .food-pidan .food-hero {
+    background: linear-gradient(160deg, #0A0807 0%, #141110 50%, #1A1510 100%);
+  }
+
+  .food-pidan .food-hero-pattern svg {
+    opacity: 0.04;
+  }
+
+  .food-pidan .food-hero h1 {
+    color: #E8DCC8;
+  }
+
+  .food-pidan .food-hero-cn {
+    color: rgba(196,149,106,0.5);
+  }
+
+  .food-pidan .food-hero-sub {
+    color: rgba(232,220,200,0.5);
+  }
+
+  .food-pidan .food-hero-stat-num {
+    background: linear-gradient(135deg, #C4956A, #D4A574);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .food-pidan .food-section {
+    border-bottom-color: rgba(196,149,106,0.06);
+  }
+
+  .food-pidan .food-section-content p {
+    color: #A09080;
+  }
+
+  .food-pidan .food-section-content h2 {
+    color: #D4C8B8;
+  }
+
+  .food-pidan .food-section-content h3,
+  .food-pidan .food-grid-item h4 {
+    color: #C4956A;
+  }
+
+  .food-pidan .food-grid-item {
+    border-top-color: rgba(196,149,106,0.15);
+  }
+
+  .food-pidan .food-grid-item p {
+    color: #7A7060;
+  }
+
+  .food-pidan .food-stats {
+    background: #0D0A08;
+    border-top-color: rgba(196,149,106,0.06);
+    border-bottom-color: rgba(196,149,106,0.06);
+  }
+
+  .food-pidan .food-stat {
+    border-right-color: rgba(196,149,106,0.06);
+  }
+
+  .food-pidan .food-stat-num {
+    background: linear-gradient(135deg, #C4956A, #D4A574);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .food-pidan .food-stat-label {
+    color: #6A6050;
+  }
+
+  .food-pidan .food-myth-card {
+    background: rgba(28,23,21,0.6);
+    border-color: rgba(196,149,106,0.08);
+    backdrop-filter: blur(4px);
+  }
+
+  .food-pidan .food-myth-card p {
+    color: #8A7E6E;
+  }
+
+  .food-pidan .food-myth-card p strong {
+    color: #D4C8B8;
+  }
+
+  .food-pidan .food-myth-label.myth {
+    color: #B8860B;
+  }
+
+  .food-pidan .food-myth-label.fact {
+    color: #5A8A6A;
+  }
+
+  .food-pidan .food-quote blockquote {
+    color: rgba(196,149,106,0.7);
+  }
+
+  .food-pidan .food-quote cite {
+    color: #5A5040;
+  }
+
+  .food-pidan .food-back a {
+    color: #6A6050;
+  }
+
+  .food-pidan .food-back a:hover {
+    color: #C4956A;
+  }
+
+  .food-pidan footer {
+    border-top-color: rgba(196,149,106,0.06);
+    color: #5A5040;
+  }
+
+  .food-pidan .footer-logo span {
+    color: #C4956A;
+  }
+
+  .food-pidan .food-section-label {
+    color: #5A8A6A;
+    letter-spacing: 0.18em;
+  }
+
+  @media (max-width: 900px) {
+    .food-pidan .food-hero {
+      padding: 90px 24px 50px;
+    }
   }
 </style>
 </head>
@@ -26,10 +161,11 @@
 <!-- ═══ HERO ═══ -->
 <div class="food-hero">
   <div class="food-hero-pattern">
-    <svg viewBox="0 0 500 500" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-      <ellipse cx="250" cy="250" rx="210" ry="230" fill="#F5EFE0" opacity="0.08"/>
-      <ellipse cx="250" cy="250" rx="198" ry="216" fill="#5A4628" opacity="0.12"/>
-      <ellipse cx="250" cy="300" rx="108" ry="100" fill="#27500A" opacity="0.1"/>
+    <svg viewBox="0 0 600 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <ellipse cx="300" cy="280" rx="220" ry="240" fill="#C4956A" opacity="0.06"/>
+      <ellipse cx="300" cy="280" rx="200" ry="220" fill="#0A0807" opacity="0.08"/>
+      <ellipse cx="300" cy="330" rx="110" ry="100" fill="#2D4A3E" opacity="0.08"/>
+      <path d="M180 180 L205 208 M220 150 L240 180 M395 160 L418 190 M430 210 L448 238 M170 370 L195 396 M440 358 L462 385 M240 140 L258 165 M340 400 L360 422" stroke="#C4956A" stroke-width="1.5" opacity="0.1" fill="none"/>
     </svg>
   </div>
   <div class="food-hero-inner">
@@ -37,7 +173,7 @@
       <div class="food-hero-badge">No. 001</div>
       <div class="food-hero-cn">皮蛋 · pí dàn</div>
       <h1>The Century Egg</h1>
-      <p class="food-hero-sub">Black as amber, bouncy as jelly. The most misunderstood delicacy in Chinese cuisine.</p>
+      <p class="food-hero-sub">黑如琥珀，Q 如果冻。<br>中国菜中最被误解的珍味。</p>
     </div>
     <div class="food-hero-right">
       <div class="food-hero-stat">
@@ -52,9 +188,9 @@
 <div class="food-section">
   <div class="food-section-label">What Is It</div>
   <div class="food-section-content">
-    <h2>A preserved egg transformed by<br>alkaline chemistry over weeks</h2>
-    <p>也叫松花蛋。鲜鸭蛋裹上混合了草木灰、石灰、盐和茶的泥浆，在无氧环境中静置30天以上。蛋黄变成墨绿流心或固体膏状，蛋白变成琥珀色的半透明果冻状，表面常有羽毛状的松花纹结晶。</p>
-    <p>味道上不是所有人能接受的——它有强烈的氨味和矿物质味，但配合酱油、醋和姜末，就能变成一道清爽开胃的冷前菜。</p>
+    <h2>一颗被碱性化学重塑的鸭蛋，<br>三十天完成蜕变</h2>
+    <p>皮蛋，又名松花蛋、变蛋。鲜鸭蛋裹上草木灰、石灰、盐和茶叶调制的泥浆，在无氧环境中静静发酵 25–30 天。蛋黄化作墨绿流心，蛋白凝为琥珀色半透明凝胶，表面常有羽毛般的松花纹结晶——那是氨基酸与金属离子相遇留下的印记。</p>
+    <p>入口有强烈的氨气与矿物气息，不是所有人能接受它的第一次。但配上酱油、香醋和姜末，它变成一道让人上瘾的凉菜——层次丰富，余味悠长。</p>
   </div>
 </div>
 
@@ -74,7 +210,7 @@
       <div class="food-stat-label">Horses involved</div>
     </div>
     <div class="food-stat">
-      <div class="food-stat-num">8–9</div>
+      <div class="food-stat-num">9–12</div>
       <div class="food-stat-label">pH of finished egg</div>
     </div>
   </div>
@@ -84,10 +220,10 @@
 <div class="food-section">
   <div class="food-section-label">History</div>
   <div class="food-section-content">
-    <h2>From accidental discovery to<br>Ming Dynasty staple</h2>
-    <p>关于皮蛋的起源，最广为流传的说法来自明代（1368–1644）。传说湖南一户人家发现，几个月前遗忘在石灰坑里的鸭蛋竟然变得晶莹剔透，味道独特。这个"意外"很快传开，皮蛋由此诞生。</p>
-    <p>但考古证据表明，蛋类保存技术早在更早的时期就已存在。明代只是皮蛋被正式记载并普及的时期。到清代，皮蛋已经成为中国餐桌上常见的前菜。</p>
-    <p>20世纪后期，随着国际贸易和华人移民，皮蛋传播到世界各地。2000年代后，它在西方媒体上频繁出现在"最恶心食物"榜单中——但也因此激发了更多人去尝试和了解它。</p>
+    <h2>一次意外的发现，<br>跨越千年的餐桌传奇</h2>
+    <p>关于皮蛋的起源，最广为流传的说法来自明代。传说湖南一户人家发现，几个月前遗忘在石灰坑里的鸭蛋竟变得晶莹剔透，味道独特。这个"意外"很快传开，皮蛋由此诞生。</p>
+    <p>但蛋类保存技术的历史远比明代更久远。考古线索表明，早在唐宋时期，类似的碱性蛋品工艺就已存在。明代只是皮蛋被正式记载并走向普及的年代。</p>
+    <p>到清代，皮蛋已经成为中国宴席上不可或缺的冷盘。20 世纪后期，随着华人足迹遍布世界，皮蛋漂洋过海，在异国他乡引发了两种截然不同的反应——有人避之不及，有人一见钟情。</p>
   </div>
 </div>
 
@@ -95,18 +231,18 @@
 <div class="food-section">
   <div class="food-section-label">The Science</div>
   <div class="food-section-content">
-    <h2>Alkaline magic: how pH<br>rewrites an egg</h2>
-    <p>皮蛋的转化是纯粹的化学过程。鲜鸭蛋的pH约7左右，被碱性泥浆包裹后，OH⁻离子通过蛋壳微孔渗透进去，将pH推高到9–12。</p>
-    <p>这个碱性环境导致蛋白质分子间的氢键断裂，蛋白重新折叠成透明凝胶状。蛋黄中的脂肪和蛋白质也发生分解，产生独特的风味物质——包括微量的氨和硫化氢（这正是皮蛋"臭"味的来源）。</p>
+    <h2>碱性魔法：当 pH 值<br>改写一颗蛋的命运</h2>
+    <p>皮蛋的转化是纯粹的物理化学过程。鲜鸭蛋的 pH 约 7，被碱性泥浆包裹后，OH⁻ 离子穿过蛋壳微孔向内渗透，将内部 pH 推高到 9–12。</p>
+    <p>这场 pH 的剧烈跃迁，让蛋白质分子间的氢键断裂、重新折叠——蛋白从液态变为透明凝胶，蛋黄中的脂肪和蛋白质分解出独特的风味物质，包括微量的氨和硫化氢。这正是皮蛋标志性气味的来源。</p>
 
     <div class="food-grid-3">
       <div class="food-grid-item">
         <h4>pH 7 → 9–12</h4>
-        <p>鲜蛋到皮蛋的pH跃迁，碱穿透蛋壳重新排列蛋白质结构。</p>
+        <p>鲜蛋到皮蛋的 pH 跃迁。碱穿透蛋壳，重塑蛋白质结构。</p>
       </div>
       <div class="food-grid-item">
-        <h4>30 Days</h4>
-        <p>标准腌制周期。时间越久，蛋黄越硬实，味道越浓郁。</p>
+        <h4>25–30 天</h4>
+        <p>标准腌制周期。时间越长，蛋黄越硬实，风味越醇厚。</p>
       </div>
       <div class="food-grid-item">
         <h4>松花纹</h4>
@@ -120,25 +256,25 @@
 <div class="food-section">
   <div class="food-section-label">Myths vs Facts</div>
   <div class="food-section-content">
-    <h2>The tallest tales about<br>century eggs, debunked</h2>
-    <p>皮蛋可能是被误解最深的中国食物之一。以下是流传最广的三大谣言：</p>
+    <h2>给皮蛋正名：<br>关于它流传最广的谣言</h2>
+    <p>皮蛋可能是被误解最深的中国食物之一。以下是最流行的三个谣言——以及真相。</p>
 
     <div class="food-myth-grid">
       <div class="food-myth-card">
         <div class="food-myth-label myth">✕ Myth</div>
-        <p><strong>"埋在地下100年才长这样。"</strong><br>名字里的"century"只是翻译的夸张。实际腌制只需25–30天。</p>
+        <p><strong>"埋在地下 100 年才长这样。"</strong><br>名字里的"century"只是翻译的夸张。实际腌制只需 25–30 天。</p>
       </div>
       <div class="food-myth-card">
         <div class="food-myth-label fact">✓ Fact</div>
-        <p>传统制法确实用泥浆包裹储存，但时间以周计算，不是百年。现代工艺已用盐水浸泡和真空包装替代泥浆。</p>
+        <p>传统制法确实用泥浆包裹，但时间以周计算，不是百年。现代工艺已改用盐水浸泡和真空包装。</p>
       </div>
       <div class="food-myth-card">
         <div class="food-myth-label myth">✕ Myth</div>
-        <p><strong>"用马尿泡出来的。"</strong><br>完全不对。这是流传最广的恶心谣言，没有任何依据。</p>
+        <p><strong>"用马尿泡出来的。"</strong><br>流传最广的恶心谣言，完全没有依据。</p>
       </div>
       <div class="food-myth-card">
         <div class="food-myth-label fact">✓ Fact</div>
-        <p>碱性介质是草木灰、石灰、盐和茶叶的混合浆。马尿既没必要，也没有任何传统配方使用它。</p>
+        <p>碱性介质是草木灰、石灰、盐和茶叶的混合浆。没有任何传统配方使用马尿。</p>
       </div>
     </div>
   </div>
@@ -148,20 +284,20 @@
 <div class="food-section">
   <div class="food-section-label">How to Eat</div>
   <div class="food-section-content">
-    <h2>Three classic ways to<br>enjoy century egg</h2>
+    <h2>三种经典吃法，<br>打开皮蛋的大门</h2>
 
     <div class="food-grid-3">
       <div class="food-grid-item">
         <h4>皮蛋豆腐</h4>
-        <p>最经典的做法。嫩豆腐切片，皮蛋切瓣，淋上酱油、醋、香油和剁椒，撒上葱花和香菜。冷食，三分钟搞定。</p>
+        <p>嫩豆腐切块垫底，皮蛋切瓣铺面，淋上酱油、香醋、香油，点缀剁椒、葱花、香菜。冷食，三分钟上桌。</p>
       </div>
       <div class="food-grid-item">
         <h4>皮蛋瘦肉粥</h4>
-        <p>广东粥的代表。白粥熬到绵密，加入切碎的皮蛋和腌过的瘦肉丝，出锅撒白胡椒粉和葱花。早餐首选。</p>
+        <p>广式粥品的代表作。白粥熬至绵密，加入皮蛋碎和腌瘦肉丝，出锅撒白胡椒和葱花。早餐暖胃首选。</p>
       </div>
       <div class="food-grid-item">
-        <h4>凉拌皮蛋</h4>
-        <p>切瓣摆盘，浇上姜末醋汁，配辣椒油。最简单也最考验皮蛋品质的做法——好不好吃全看蛋本身。</p>
+        <h4>姜汁皮蛋</h4>
+        <p>切瓣摆盘，浇上姜末醋汁，配辣椒油。最简单也最考验皮蛋品质的做法——好不好吃，全看蛋本身。</p>
       </div>
     </div>
   </div>
@@ -169,13 +305,13 @@
 
 <!-- ═══ QUOTE ═══ -->
 <div class="food-quote">
-  <blockquote>"The first time I ate a century egg, I thought it was a mistake. The second time, I was curious. By the third, I was a convert."</blockquote>
-  <cite>— Anthony Bourdain (paraphrased)</cite>
+  <blockquote>"第一次吃皮蛋，我以为这是个错误。<br>第二次，我充满好奇。<br>第三次，我已经成了它的信徒。"</blockquote>
+  <cite>— 一位曾经的怀疑者</cite>
 </div>
 
-<!-- ═══ BACK LINK ═══ -->
+<!-- ═══ BACK ═══ -->
 <div class="food-back">
-  <a href="../">← Back to all foods</a>
+  <a href="../">← 返回全部美食</a>
 </div>
 
 <!-- ═══ FOOTER ═══ -->

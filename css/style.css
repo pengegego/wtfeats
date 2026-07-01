@@ -430,6 +430,7 @@ footer {
   --food-hero-text: var(--food-light);
 }
 
+html.food-page body,
 .food-page body {
   background: var(--food-bg);
 }
