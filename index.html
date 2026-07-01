@@ -1,113 +1,147 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wtfeats — 中国奇葩美食图鉴</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WTFeats — What's This Food?</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="grid-bg"></div>
 
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="/" class="logo">wtfeats</a>
-      <div class="nav-links">
-        <a href="#about">关于</a>
-        <a href="#gallery">图鉴</a>
-      </div>
-    </div>
-  </nav>
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">WTF<span>eats</span></a>
+  <div class="nav-right">
+    <a href="#">About</a>
+    <a href="#">All Foods</a>
+    <span class="nav-tag">What's this food?</span>
+  </div>
+</nav>
 
-  <section id="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <p class="hero-label">/ 中 国 奇 葩 美 食 图 鉴 /</p>
-      <h1 class="hero-title">
-        <span class="line-neon">味 道 的</span>
-        <span class="line-cyan">边 界</span>
-      </h1>
-      <p class="hero-sub">有些美味，<span class="glitch" data-text="胆大者">胆大者</span>才懂。</p>
-      <div class="hero-cta">
-        <a href="#gallery" class="btn-neon">探 索 美 食</a>
-        <span class="btn-pulse"></span>
-      </div>
-      <div class="hero-scroll">↓</div>
-    </div>
-  </section>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-count">1 food documented — more coming</div>
+    <h1><span class="wtf">WTF</span><br>is that?</h1>
+    <p class="hero-desc">A field guide to Chinese foods that look terrifying, taste incredible, and deserve a proper explanation.</p>
+  </div>
+  <div class="hero-right">
+    <span class="hero-scroll-hint">Scroll</span>
+  </div>
+</div>
 
-  <section id="gallery">
-    <div class="section-header">
-      <h2>· 美 食 图 鉴 ·</h2>
-      <div class="divider-neon"></div>
-    </div>
+<!-- FOOD GRID -->
+<div class="grid-section">
+  <div class="grid-header">
+    <span class="grid-header-label">Foods documented</span>
+    <span class="grid-count">01 of more</span>
+  </div>
 
-    <div class="card-grid">
-      <a href="/centuryegg" class="card" data-delay="0">
-        <div class="card-img-wrap">
-          <div class="card-img-placeholder centuryegg-bg">
-            <span class="card-emoji">🥚</span>
-          </div>
-          <div class="card-overlay">
-            <span class="card-enter">→ 进入</span>
-          </div>
+  <div class="food-grid">
+
+    <!-- 皮蛋 ACTIVE CARD -->
+    <a class="food-card card-pidan" href="/centuryegg/">
+      <div class="card-pidan-inner">
+
+        <!-- big bg cross-section -->
+        <div class="card-pidan-bg">
+          <svg viewBox="0 0 500 500" width="480" height="480">
+            <ellipse cx="250" cy="250" rx="210" ry="230" fill="#F5EFE0"/>
+            <ellipse cx="250" cy="250" rx="198" ry="216" fill="#5A4628"/>
+            <path d="M140 140 L162 164 M178 118 L196 146 M335 128 L358 156 M368 170 L385 194 M128 330 L150 352 M380 320 L400 345 M200 110 L216 130 M290 355 L308 375" stroke="#C9B583" stroke-width="2" opacity="0.6" fill="none"/>
+            <ellipse cx="250" cy="300" rx="108" ry="100" fill="#27500A"/>
+            <ellipse cx="250" cy="300" rx="76" ry="70" fill="#1F3D08"/>
+          </svg>
         </div>
+
+        <div class="card-label">
+          <span class="card-badge">Now Available</span>
+          <span class="card-num">No. 001</span>
+        </div>
+
         <div class="card-body">
-          <div class="card-tag-wrap">
-            <span class="card-tag">#开篇</span>
-            <span class="card-tag">#头号</span>
-          </div>
-          <h3 class="card-title">皮蛋<span class="card-en">Century Egg</span></h3>
-          <p class="card-desc">黑如琥珀，Q 弹透亮。外国人眼中的"魔鬼蛋"，中国人餐桌上的开胃凉菜。</p>
+          <div class="card-cn">皮蛋 · pí dàn</div>
+          <div class="card-title">The Century<br>Egg</div>
+          <div class="card-desc">Not buried for a century. Not made with horse urine. Just 30 days of alkaline chemistry — and 1,300 years of history.</div>
+          <span class="card-cta">Read the full story →</span>
         </div>
-        <div class="card-glow"></div>
-      </a>
 
-      <div class="card card-placeholder" data-delay="1">
-        <div class="card-img-wrap">
-          <div class="card-img-placeholder empty-bg">
-            <span class="card-emoji">?</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">即将登场</h3>
-          <p class="card-desc">下一道奇葩美食，敬请期待……</p>
-        </div>
       </div>
+    </a>
 
-      <div class="card card-placeholder" data-delay="2">
-        <div class="card-img-wrap">
-          <div class="card-img-placeholder empty-bg">
-            <span class="card-emoji">?</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">即将登场</h3>
-          <p class="card-desc">下一道奇葩美食，敬请期待……</p>
-        </div>
+    <!-- PLACEHOLDER 2 -->
+    <div class="food-card card-placeholder card-ph-2">
+      <div class="placeholder-icon">?</div>
+      <div class="placeholder-text">
+        <div class="placeholder-title">Coming soon</div>
+        <div class="placeholder-sub">No. 002</div>
       </div>
     </div>
-  </section>
 
-  <section id="about">
-    <div class="about-content">
-      <h2>· 关 于 ·</h2>
-      <div class="divider-neon"></div>
-      <p>中国地大物博，美食千奇百怪。<br>有些让老外闻风丧胆，有些连本地人都不敢下嘴。</p>
-      <p><strong class="neon-text">wtfeats</strong> 记录那些让人又爱又怕的奇葩味道，<br>每道美食用一种独特风格呈现。</p>
-      <p class="about-tagline">—— 吃过的才懂。</p>
+    <!-- PLACEHOLDER 3 -->
+    <div class="food-card card-placeholder card-ph-3 card-col-1">
+      <div class="placeholder-icon">?</div>
+      <div class="placeholder-text">
+        <div class="placeholder-title">Coming soon</div>
+        <div class="placeholder-sub">No. 003</div>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">wtfeats</div>
-      <p class="footer-tag">· 中国奇葩美食图鉴 ·</p>
+    <!-- PLACEHOLDER 4 -->
+    <div class="food-card card-placeholder card-ph-4">
+      <div class="placeholder-icon">?</div>
+      <div class="placeholder-text">
+        <div class="placeholder-title">Coming soon</div>
+        <div class="placeholder-sub">No. 004</div>
+      </div>
     </div>
-  </footer>
 
-  <script src="js/script.js"></script>
+    <!-- PLACEHOLDER 5 -->
+    <div class="food-card card-placeholder card-ph-5">
+      <div class="placeholder-icon">?</div>
+      <div class="placeholder-text">
+        <div class="placeholder-title">Coming soon</div>
+        <div class="placeholder-sub">No. 005</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">1,300</div>
+    <div class="stat-label">Years of pidan history</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">25–30</div>
+    <div class="stat-label">Days to cure, not 100 years</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0</div>
+    <div class="stat-label">Horses involved in production</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">∞</div>
+    <div class="stat-label">Western misconceptions, corrected</div>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<div class="manifesto">
+  <div class="manifesto-label">Why this site exists</div>
+  <div class="manifesto-text">
+    Chinese food has been called disgusting on TV, ranked on "worst foods" lists, and reduced to shock content — by people who never understood what they were eating.<br><br>
+    <em>WTFeats</em> is a corrective. Every food here gets the explanation it deserves: the history, the chemistry, the craft. No fear-mongering. No exoticism. Just facts.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">WTF<span>eats</span></span>
+  <span>A field guide to misunderstood Chinese food</span>
+</footer>
+
 </body>
 </html>
