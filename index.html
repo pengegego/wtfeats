@@ -3,14 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wtfeats</title>
+  <title>wtfeats — 中国奇葩美食图鉴</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
-    <h1>wtfeats</h1>
-    <p>Coming soon...</p>
-  </div>
+  <div id="grid-bg"></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo">wtfeats</a>
+      <div class="nav-links">
+        <a href="#about">关于</a>
+        <a href="#gallery">图鉴</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-label">/ 中 国 奇 葩 美 食 图 鉴 /</p>
+      <h1 class="hero-title">
+        <span class="line-neon">味 道 的</span>
+        <span class="line-cyan">边 界</span>
+      </h1>
+      <p class="hero-sub">有些美味，<span class="glitch" data-text="胆大者">胆大者</span>才懂。</p>
+      <div class="hero-cta">
+        <a href="#gallery" class="btn-neon">探 索 美 食</a>
+        <span class="btn-pulse"></span>
+      </div>
+      <div class="hero-scroll">↓</div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="section-header">
+      <h2>· 美 食 图 鉴 ·</h2>
+      <div class="divider-neon"></div>
+    </div>
+
+    <div class="card-grid">
+      <a href="/centuryegg" class="card" data-delay="0">
+        <div class="card-img-wrap">
+          <div class="card-img-placeholder centuryegg-bg">
+            <span class="card-emoji">🥚</span>
+          </div>
+          <div class="card-overlay">
+            <span class="card-enter">→ 进入</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tag-wrap">
+            <span class="card-tag">#开篇</span>
+            <span class="card-tag">#头号</span>
+          </div>
+          <h3 class="card-title">皮蛋<span class="card-en">Century Egg</span></h3>
+          <p class="card-desc">黑如琥珀，Q 弹透亮。外国人眼中的"魔鬼蛋"，中国人餐桌上的开胃凉菜。</p>
+        </div>
+        <div class="card-glow"></div>
+      </a>
+
+      <div class="card card-placeholder" data-delay="1">
+        <div class="card-img-wrap">
+          <div class="card-img-placeholder empty-bg">
+            <span class="card-emoji">?</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">即将登场</h3>
+          <p class="card-desc">下一道奇葩美食，敬请期待……</p>
+        </div>
+      </div>
+
+      <div class="card card-placeholder" data-delay="2">
+        <div class="card-img-wrap">
+          <div class="card-img-placeholder empty-bg">
+            <span class="card-emoji">?</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">即将登场</h3>
+          <p class="card-desc">下一道奇葩美食，敬请期待……</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <h2>· 关 于 ·</h2>
+      <div class="divider-neon"></div>
+      <p>中国地大物博，美食千奇百怪。<br>有些让老外闻风丧胆，有些连本地人都不敢下嘴。</p>
+      <p><strong class="neon-text">wtfeats</strong> 记录那些让人又爱又怕的奇葩味道，<br>每道美食用一种独特风格呈现。</p>
+      <p class="about-tagline">—— 吃过的才懂。</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">wtfeats</div>
+      <p class="footer-tag">· 中国奇葩美食图鉴 ·</p>
+    </div>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
