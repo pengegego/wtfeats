@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════
+   wtfeats — 皮蛋 · Century Egg
+   深琥珀 · 墨绿 · 黑
+   神秘 · 高级 · 时间沉淀
+   ═══════════════════════════════════════ */
+
+.food-pidan {
+  --food-primary: #C4956A;
+  --food-accent: #C4956A;
+  --food-bg: #141110;
+  --food-bg-alt: #1C1715;
+  --food-text: #D4C8B8;
+  --food-text-soft: #9A8E7E;
+  --food-line: rgba(196,149,106,0.1);
+  --food-light: #E8DCC8;
+  --food-hero-bg: #0A0807;
+  --food-hero-text: #C4956A;
+}
+
+/* ── Hero ── */
+.food-pidan .food-hero {
+  background: linear-gradient(160deg, #0A0807 0%, #141110 50%, #1A1510 100%);
+}
+
+.food-pidan .food-hero-pattern svg {
+  opacity: 0.04;
+}
+
+.food-pidan .food-hero h1 {
+  color: #E8DCC8;
+}
+
+.food-pidan .food-hero-cn {
+  color: rgba(196,149,106,0.5);
+}
+
+.food-pidan .food-hero-sub {
+  color: rgba(232,220,200,0.5);
+}
+
+.food-pidan .food-hero-stat-num {
+  background: linear-gradient(135deg, #C4956A, #D4A574);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Sections ── */
+.food-pidan .food-section {
+  border-bottom-color: rgba(196,149,106,0.06);
+}
+
+.food-pidan .food-section-content p {
+  color: #A09080;
+}
+
+.food-pidan .food-section-content h2 {
+  color: #D4C8B8;
+}
+
+.food-pidan .food-section-content h3,
+.food-pidan .food-grid-item h4 {
+  color: #C4956A;
+}
+
+.food-pidan .food-grid-item {
+  border-top-color: rgba(196,149,106,0.15);
+}
+
+.food-pidan .food-grid-item p {
+  color: #7A7060;
+}
+
+/* ── Stats ── */
+.food-pidan .food-stats {
+  background: #0D0A08;
+  border-top-color: rgba(196,149,106,0.06);
+  border-bottom-color: rgba(196,149,106,0.06);
+}
+
+.food-pidan .food-stat {
+  border-right-color: rgba(196,149,106,0.06);
+}
+
+.food-pidan .food-stat-num {
+  background: linear-gradient(135deg, #C4956A, #D4A574);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.food-pidan .food-stat-label {
+  color: #6A6050;
+}
+
+/* ── Myth Cards ── */
+.food-pidan .food-myth-card {
+  background: rgba(28,23,21,0.6);
+  border-color: rgba(196,149,106,0.08);
+  backdrop-filter: blur(4px);
+}
+
+.food-pidan .food-myth-card p {
+  color: #8A7E6E;
+}
+
+.food-pidan .food-myth-card p strong {
+  color: #D4C8B8;
+}
+
+.food-pidan .food-myth-label.myth {
+  color: #B8860B;
+}
+
+.food-pidan .food-myth-label.fact {
+  color: #5A8A6A;
+}
+
+/* ── Quote ── */
+.food-pidan .food-quote blockquote {
+  color: rgba(196,149,106,0.7);
+}
+
+.food-pidan .food-quote cite {
+  color: #5A5040;
+}
+
+/* ── Back Link ── */
+.food-pidan .food-back a {
+  color: #6A6050;
+}
+
+.food-pidan .food-back a:hover {
+  color: #C4956A;
+}
+
+/* ── Footer ── */
+.food-pidan footer {
+  border-top-color: rgba(196,149,106,0.06);
+  color: #5A5040;
+}
+
+.food-pidan .footer-logo span {
+  color: #C4956A;
+}
+
+/* ── Side Label ── */
+.food-pidan .food-section-label {
+  color: #5A8A6A;
+  letter-spacing: 0.18em;
+}
+
+/* ── Gallery ── */
+.food-pidan .food-gallery {
+  padding-top: 0;
+}
+
+.food-pidan .food-gallery-item {
+  background: rgba(28,23,21,0.6);
+  border-color: rgba(196,149,106,0.06);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .food-pidan .food-hero {
+    padding: 90px 24px 50px;
+  }
+}
