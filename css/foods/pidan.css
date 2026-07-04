@@ -20,6 +20,23 @@
 /* ── Hero ── */
 .food-pidan .food-hero {
   background: linear-gradient(160deg, #0A0807 0%, #141110 50%, #1A1510 100%);
+  position: relative;
+}
+
+.food-pidan .food-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/Century_Egg_Alchemy_-_Slide_8C.png') right bottom / auto 60% no-repeat;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 55%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 55%, black 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.food-pidan .food-hero-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .food-pidan .food-hero-pattern svg {
