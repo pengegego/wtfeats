@@ -26,9 +26,9 @@
 
 .food-pidan .food-hero-bgimg {
   position: absolute;
-  right: 56px;
+  right: 0;
   bottom: 0;
-  height: 50%;
+  height: 45%;
   width: auto;
   max-width: 70%;
   object-fit: contain;
