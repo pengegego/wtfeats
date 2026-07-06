@@ -66,6 +66,8 @@ nav a{
  white-space:nowrap;
 }
 nav a:hover{color:var(--amber);background:rgba(196,148,74,0.08)}
+nav .nav-home{color:var(--amber);font-weight:600;border:1px solid rgba(196,148,74,0.2)}
+nav .nav-home:hover{background:rgba(196,148,74,0.12);border-color:var(--amber)}
 section{padding:6rem 1.5rem}
 .section-inner{
  max-width:var(--max-w);margin:0 auto;
