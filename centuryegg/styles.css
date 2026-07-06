@@ -158,7 +158,6 @@ section{padding:6rem 1.5rem}
  border-left:2px solid var(--amber);
 }
 .label-item .en{font-size:0.85rem;color:var(--text)}
-.label-item .cn{font-size:0.75rem;color:var(--text-muted);margin-top:0.15rem}
 .timeline-intro{text-align:center;margin-bottom:3rem}
 .timeline-grid{
  display:grid;
@@ -327,7 +326,6 @@ section{padding:6rem 1.5rem}
  line-height:1;min-width:1.5rem;
 }
 .layer-item .en{font-size:0.85rem;color:var(--text);font-weight:500}
-.layer-item .cn{font-size:0.75rem;color:var(--text-muted);margin-top:0.1rem}
 .matrix{background:var(--surface)}
 .matrix-intro{text-align:center;margin-bottom:3rem}
 .matrix-img-wrap{
