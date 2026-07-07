@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>皮蛋的45天极限蜕变 · 画廊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0d0d0d;
+            background-image: radial-gradient(circle at 10% 20%, #1a1a1a 0%, #050505 90%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #eaeaea;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== 头部 ===== */
+        .header {
+            text-align: center;
+            padding: 30px 20px 20px;
+            border-bottom: 2px dashed #2a2a2a;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #f5d78e, #e6b800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .header .sub {
+            font-size: clamp(0.9rem, 2vw, 1.3rem);
+            color: #aaa;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .header .sub a {
+            color: #b8860b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8860b;
+        }
+
+        /* ===== 图片卡片 ===== */
+        .slide-card {
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(4px);
+            border: 1px solid #2a2a2a;
+            border-radius: 32px;
+            padding: 20px 20px 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .slide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .slide-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 每张图片下方可选的标注（如果幻灯片本身没写清楚，可以加） */
+        .slide-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #777;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ===== 底部 ===== */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 10px;
+            border-top: 1px solid #2a2a2a;
+            margin-top: 20px;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        .footer .emoji-big {
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: 0 4px;
+        }
+
+        /* ===== 响应式微调 ===== */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            .slide-card {
+                padding: 12px 12px 10px;
+                border-radius: 24px;
+            }
+            .header {
+                padding: 20px 0 10px;
+            }
+        }
+
+        /* ===== 加载动画 ===== */
+        .slide-card {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+        .slide-card:nth-child(1) { animation-delay: 0.05s; }
+        .slide-card:nth-child(2) { animation-delay: 0.10s; }
+        .slide-card:nth-child(3) { animation-delay: 0.15s; }
+        .slide-card:nth-child(4) { animation-delay: 0.20s; }
+        .slide-card:nth-child(5) { animation-delay: 0.25s; }
+        .slide-card:nth-child(6) { animation-delay: 0.30s; }
+        .slide-card:nth-child(7) { animation-delay: 0.35s; }
+        .slide-card:nth-child(8) { animation-delay: 0.40s; }
+        .slide-card:nth-child(9) { animation-delay: 0.45s; }
+        .slide-card:nth-child(10) { animation-delay: 0.50s; }
+        .slide-card:nth-child(11) { animation-delay: 0.55s; }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ===== 头部 ===== -->
+    <header class="header">
+        <h1>🥚 → 🖤 皮蛋的45天极限蜕变</h1>
+        <p class="sub">
+            一枚蛋的硬核改造 · 全部插图由 <a href="#" onclick="return false;">NotebookLM</a> 友情绘制
+        </p>
+    </header>
+
+    <!-- ===== 画廊：所有幻灯片 ===== -->
+    <div class="gallery">
+
+        <!-- Slide 1 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_1.png" alt="封面：45天极限蜕变">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_2.png" alt="时间轴：四个阶段">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_3.png" alt="阶段一：彻底崩溃">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_4.png" alt="警告：千万别碰">
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_5.png" alt="阶段二：内部大翻新">
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_6.png" alt="阶段三：哥特阶段">
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_7.png" alt="松花纹身">
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_8.png" alt="谣言粉碎机">
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_9.png" alt="阶段四：陈酿阶段">
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_10.png" alt="最终警告：别泡过头">
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide-card">
+            <img src="happyimages/The_45_Day_Century_Egg_Glow_Up_-_Slide_11.png" alt="解剖学杰作">
+        </div>
+
+    </div>
+
+    <!-- ===== 底部 ===== -->
+    <footer class="footer">
+        <span class="emoji-big">🥚</span> 从平凡到非凡 · 尊重每一枚敢变的蛋 <span class="emoji-big">🖤</span><br>
+        <span style="font-size:0.75rem; opacity:0.6;">WTFeats.com · 不正经食物档案馆 · 图片由 NotebookLM 生成</span>
+    </footer>
+
+</div>
+</body>
+</html>

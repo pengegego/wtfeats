@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>详细页 — CommonWeb</title>
+  <meta name="description" content="通用网站详细页 — 文章内容展示">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== 导航 ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="site-logo">Common<span>Web</span></a>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="list.html">列表</a>
+        <a href="detail.html" class="active">详细</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== 详细内容 ========== -->
+  <article class="detail-article">
+
+    <!-- 面包屑 -->
+    <nav class="breadcrumb">
+      <a href="index.html">首页</a>
+      <span class="sep">/</span>
+      <a href="list.html">文章列表</a>
+      <span class="sep">/</span>
+      <span class="current">如何构建可复用的网站模板系统</span>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="detail-header">
+      <div class="detail-category">技术</div>
+      <h1 class="detail-title">如何构建可复用的网站模板系统</h1>
+      <div class="detail-meta">
+        <span>📅 2026-06-01</span>
+        <span>👤 小赫</span>
+        <span>⏱ 5 分钟阅读</span>
+        <span>👁 1,284 次阅读</span>
+      </div>
+    </header>
+
+    <!-- 封面图 -->
+    <div class="detail-cover">
+      <div class="img-placeholder">📷 文章主图 1200×600 — 可替换为实际图片</div>
+    </div>
+
+    <!-- 文章正文 -->
+    <div class="detail-content">
+
+      <p>一套完善的网站模板系统是高效开发的基石。当项目从单页面演进到多页面，从一个人开发到团队协作，如果没有统一的模板体系，代码很快会陷入重复、难以维护的泥潭。</p>
+
+      <p>本文从 <strong>CSS 变量体系</strong>、<strong>组件化思维</strong>、<strong>网格系统</strong> 三个核心维度，探讨如何搭建既灵活又可扩展的前端模板系统。无论你是个人开发者还是团队的一员，这些原则都能帮助你构建更可持续的代码基础。</p>
+
+      <h2>一、CSS 变量：设计 Token 的工程化</h2>
+
+      <p>传统的前端项目中，颜色、字体、间距等设计常量散落在各个 CSS 文件中。当你需要调整主题色时，不得不逐个文件查找替换，容易遗漏且极易出错。</p>
+
+      <p>CSS 自定义属性（Custom Properties）提供了优雅的解决方案。通过在 <code>:root</code> 中定义全局变量，所有样式文件引用同一套 Token，修改一处即可全局生效：</p>
+
+      <blockquote>
+        "设计 Token 是设计师与开发者之间的共同语言。它将视觉决策编码为命名清晰的变量，让设计系统在代码层面真正落地。"
+      </blockquote>
+
+      <p>在实践中，我将变量分为四个层次：基础色板（颜色数值）、语义 Token（功能用途）、组件变量（局部覆盖）和上下文变量（状态响应）。层次清晰的设计让变量系统既强大又易于理解。</p>
+
+      <h3>变量命名规范</h3>
+
+      <p>好的命名规范是变量系统可用性的关键。推荐采用 <code>--[类别]-[属性]-[变体]</code> 的格式，例如 <code>--color-accent-dark</code>、<code>--font-display</code>、<code>--space-6</code>。命名应反映用途而非表象——比起 <code>--color-brown</code>，<code>--color-text-primary</code> 更能说明变量的设计意图。</p>
+
+      <h2>二、组件化：从页面到模块的思维转变</h2>
+
+      <p>组件化不仅仅是技术架构的选择，更是一种思维方式。将一个完整页面拆解为独立的、可复用的模块，每个模块负责自己的外观和行为，模块之间通过明确的接口通信。</p>
+
+      <p>在这套模板中，每个 <code>.block</code> 就是一个独立的组件容器。它不关心内部装的是什么内容——纯文本、图文混排还是标题列表——只负责提供一致的外框、间距和交互反馈。内容模式通过内部类切换，实现了容器与内容的解耦。</p>
+
+      <p>这种设计带来了三个明显的好处：</p>
+
+      <ul>
+        <li><strong>可复用性</strong>——同一套卡片组件在首页、列表页、侧边栏中均可使用</li>
+        <li><strong>可测试性</strong>——独立组件可以单独验证，减少集成测试的复杂度</li>
+        <li><strong>可维护性</strong>——修改组件的样式不会污染全局，降低回归风险</li>
+      </ul>
+
+      <h2>三、网格系统：布局的骨架</h2>
+
+      <p>CSS Grid 是现代布局的最佳选择。它同时控制行和列，天然支持二维布局，而且无需额外的框架依赖。这套模板使用两列网格配合跨列合并，实现灵活的排版效果。</p>
+
+      <p>具体来说，布局系统遵循三条核心规则：</p>
+
+      <ol>
+        <li><strong>默认二分</strong>——内容默认按两列等分排列，保持视觉平衡</li>
+        <li><strong>跨列突出</strong>——重要内容通过 <code>grid-column: 1 / -1</code> 跨越两列，获得更多视觉权重</li>
+        <li><strong>响应坍缩</strong>——在移动端自动切换为单列流式布局，确保小屏设备上的可读性</li>
+      </ol>
+
+      <p>这套规则的组合使用，可以产生丰富的布局变化。例如首页中，精选内容跨列展示大图，热门文章和关于说明并排放置，视觉节奏有张有弛。</p>
+
+      <h2>四、响应式：一次构建，处处适配</h2>
+
+      <p>响应式设计不是事后追加的补丁，而应融入模板系统的基因。合理利用 CSS 的 <code>clamp()</code> 函数、相对单位和容器查询，可以写出自适应的样式，减少媒体查询的硬编码断点。</p>
+
+      <p>本模板在 1200px 以上展示完整两列布局，900px 以下图文混排切换为纵向排列，640px 以下所有网格坍缩为单列。每个断点不只是尺寸的变化，更是内容展示方式的重新考量。</p>
+
+      <p>特别值得一提的是 <code>clamp()</code> 在响应式排版中的应用。标题字号使用 <code>clamp(1.875rem, 1.5rem + 1.5vw, 3rem)</code> 这样的取值，让字体大小随视口平滑过渡，不再需要为每个断点单独设定字号。</p>
+
+      <!-- 标签 -->
+      <div class="detail-tags">
+        <span class="tag">CSS</span>
+        <span class="tag">设计系统</span>
+        <span class="tag">前端架构</span>
+        <span class="tag">组件化</span>
+        <span class="tag">响应式</span>
+      </div>
+
+    </div>
+
+    <!-- 上下篇文章导航 -->
+    <nav class="detail-nav">
+      <div class="nav-prev">
+        <div class="nav-label">← 上一篇</div>
+        <a href="detail.html"><span class="nav-title">设计系统中的色彩与字体变量管理</span></a>
+      </div>
+      <div class="nav-next">
+        <div class="nav-label">下一篇 →</div>
+        <a href="detail.html"><span class="nav-title">CSS Grid 布局实战：从入门到精通</span></a>
+      </div>
+    </nav>
+
+  </article>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-text">© 2026 CommonWeb Template</span>
+      <span class="footer-text">Built with Hermes</span>
+    </div>
+  </footer>
+
+</body>
+</html>
