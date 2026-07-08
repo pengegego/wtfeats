@@ -1,237 +1,214 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CenturyEgg — WTFeats.com</title>
-  <meta name="description" content="通用网站界面 — 首页 列表 详细页模板">
+  <title>Century Egg - WTFeats</title>
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://wtfeats.com/centuryegg/">
+
+<meta property="og:title" content="Century Egg — A Friendly Field Guide">
+<meta property="og:description" content="Wait... people actually eat this? The century egg looks like a forbidden gemstone and tastes like savory egg custard with deep umami. It is not rotten.">
+<meta property="og:image" content="https://wtfeats.com/centuryegg/images/centuryegg.webp">
+<meta property="og:url" content="https://wtfeats.com/centuryegg/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WTFeats">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Century Egg — A Friendly Field Guide">
+<meta name="twitter:description" content="Wait... people actually eat this? The century egg looks like a forbidden gemstone and tastes like savory egg custard with deep umami. It is not rotten.">
+<meta name="twitter:image" content="https://wtfeats.com/centuryegg/images/centuryegg.webp">
+
+  <meta name="description" content="A friendly field guide to century egg: what it is, why it looks unreal, how it is made, and how people actually eat it.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260708">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Century Egg: A Friendly Field Guide",
+  "description": "Wait... people actually eat this? The century egg looks like a forbidden gemstone and tastes like savory egg custard with deep umami. It is not rotten.",
+  "image": "https://wtfeats.com/centuryegg/images/centuryegg.webp",
+  "url": "https://wtfeats.com/centuryegg/",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-08",
+  "author": {
+    "@type": "Organization",
+    "name": "WTFeats"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WTFeats",
+    "url": "https://wtfeats.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wtfeats.com/centuryegg/"
+  }
+}
+</script>
+
 </head>
 <body>
-
-  <!-- ========== 导航 ========== -->
   <header class="site-header">
     <nav class="navbar">
-      <a href="index.html" class="site-logo">WTFeats<span>com</span></a>
+      <a class="site-logo" href="../">WTF<span>eats</span></a>
       <div class="nav-links">
-        <a href="index.html" class="active">首页</a>
-        <a href="list.html">列表</a>
-        <a href="detail.html">详细</a>
+        <a class="active" href="index.html">Overview</a>
+        <a href="stage.html">45-Day Glow-Up</a>
+        <a href="detail.html">Science</a>
+        <a href="list.html">Chapters</a>
       </div>
     </nav>
   </header>
 
-  <!-- ========== 页面头部 ========== -->
-  <section class="page-hero">
-    <h1>The Alchemy of
-      the Century Egg</h1>
-    <p>一个通用网站界面模板，支持两列布局、跨列合并、图文混排与标题列表，适配桌面与移动端。</p>
-  </section>
+  <main>
+    <section class="food-hero hero-century">
+      <div class="hero-copy">
+        <p class="eyebrow">No. 001 / Misunderstood Chinese Food</p>
+        <h1>Wait... people actually eat this?</h1>
+        <p class="hero-lede">Yes. The century egg looks like a forbidden gemstone, smells a little dangerous, and tastes like savory egg custard with deep umami. It is not rotten. It is not buried for 100 years. It is controlled chemistry.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="stage.html">See the 45-day glow-up</a>
+          <a class="button button-ghost" href="detail.html">Read the science</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="images/centuryegg.webp" alt="A century egg with amber jelly and pine-flower patterns">
+        <figcaption>Amber gel, pine-flower crystals, dark yolk, zero witchcraft.</figcaption>
+      </figure>
+    </section>
 
-  <!-- ========== 两列网格 ========== -->
-  <div class="grid-2col">
+    <section class="truth-strip" aria-label="Quick myth correction">
+      <div>
+        <span class="truth-kicker">Not</span>
+        <strong>100 years old</strong>
+        <p>Most commercial century eggs cure in roughly 30 to 45 days.</p>
+      </div>
+      <div>
+        <span class="truth-kicker">Not</span>
+        <strong>rotten</strong>
+        <p>High alkalinity transforms proteins and fats instead of letting microbes take over.</p>
+      </div>
+      <div>
+        <span class="truth-kicker">Not</span>
+        <strong>horse urine</strong>
+        <p>The classic mix is alkaline clay, ash, salt, tea, and time.</p>
+      </div>
+    </section>
 
-    <!-- --- 1. 跨列 — 图文混排（图片在右） --- -->
-    <div class="block block-full block-link">
-      <div class="block-subtitle">Featured</div>
-      <div class="block-title">
-        <span class="block-icon">✦</span>
-        精选内容
+    <section class="section two-col intro-section">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">What Is It?</p>
+        <h2>A duck egg that got a chemistry degree.</h2>
       </div>
-      <div class="block-mode-media media-image-right">
-        <div class="media-text">
-          <p>A masterpiece where culinary art meets chemical precision. Through 45 days of controlled transformation, simple eggs become a textural and aromatic marvel.</p>
-          <!--
-          <p>这是跨列合并的 Block，使用 <code>block-full</code> 类即可让一个区块占据整个宽度，两列合并为一行。</p>
-          <p>图文混排模式支持图片居左或居右，只需切换 <code>media-image-left</code> / <code>media-image-right</code> 类。文字区会自适应排列在另一侧。</p>-->
-          <div class="tags">
-            <span class="tag">跨列</span>
-            <span class="tag">图文</span>
-            <span class="tag">精选</span>
-          </div>
-        </div>
-        <div class="media-image">
-          <div class="img-placeholder">
-            <img src="images/centuryegg.webp"/>
-          </div>
+      <div class="rich-copy">
+        <p>A century egg, or pidan, is usually a duck egg cured in a strongly alkaline environment. The shell stays intact, but the inside changes completely: the white becomes a translucent amber gel, and the yolk turns dark green, creamy, salty, and deeply savory.</p>
+        <p>For people meeting it for the first time, the appearance is the whole shock. For people who grew up with it, the appeal is texture: cool jelly, rich yolk, sharp sauce, and a finish that lands somewhere between egg, aged cheese, and soy-sauce umami.</p>
+        <div class="fact-grid compact-facts">
+          <div><b>Chinese name</b><span>pidan / preserved egg</span></div>
+          <div><b>Typical time</b><span>30-45 days</span></div>
+          <div><b>Texture</b><span>bouncy gel + creamy yolk</span></div>
+          <div><b>Best first bite</b><span>with tofu or congee</span></div>
         </div>
       </div>
-      <div class="block-footer">
-        <a href="detail.html">了解更多</a>
+    </section>
+
+    <section class="section image-band">
+      <div class="image-band-copy">
+        <p class="eyebrow">First Reaction</p>
+        <h2>It looks scary because it is doing something eggs normally never do.</h2>
+        <p>The white is not cooked. It becomes a gel through alkaline protein changes. The brown color comes from slow reactions between sugars and amino acids. The delicate patterns are mineral crystals growing inside the gel.</p>
       </div>
-    </div>
-    <!--stage-->
-    <div class="block block-half block-link">
-      <a href="stage.html" style="display:block;color:inherit;text-decoration:none">
-        <div class="block-subtitle">Stage1</div>
-        <div class="block-title">
-          <span class="block-icon">▲</span>
-          Chemical
-            Metamorphosis
-        </div>
-        <div class="media-image" style="width:100%">
-          <div class="img-placeholder">
-            <img src="images/The_45_Day_Century_Egg_Glow_Up_-_Slide_2.webp"/>
-          </div>
-        </div>
-        <div class="block-mode-text">
-          <p> </p>
-          <p><b>A 45-Day ChemicalMetamorphosis</b></p>
-          <p>A masterpiece where culinary art meets chemical precision. Through 45 days of controlled transformation, simple eggs become a textural and aromatic marvel.</p>
+      <img src="images/The_45_Day_Century_Egg_Glow_Up_-_Slide_2.webp" alt="NotebookLM illustration of a basic egg transforming into a century egg">
+    </section>
+
+    <section class="section cards-section">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">Myth vs Fact</p>
+        <h2>The rumors are louder than the egg.</h2>
+      </div>
+      <div class="myth-grid">
+        <article class="myth-card">
+          <span>Myth</span>
+          <h3>It is rotten.</h3>
+          <p>Rotting is uncontrolled microbial breakdown. Century egg curing is alkaline preservation.</p>
+        </article>
+        <article class="myth-card fact-card">
+          <span>Fact</span>
+          <h3>It is transformed.</h3>
+          <p>Protein structure, pH, ions, and time reshape the egg into a new texture.</p>
+        </article>
+        <article class="myth-card">
+          <span>Myth</span>
+          <h3>It is buried for a century.</h3>
+          <p>The name is dramatic. The process is measured in weeks, not generations.</p>
+        </article>
+        <article class="myth-card fact-card">
+          <span>Fact</span>
+          <h3>The best ones are mellow.</h3>
+          <p>A good century egg tastes savory, creamy, and mineral, with only a light alkaline edge.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feature-grid">
+      <a class="feature-card large-card" href="stage.html">
+        <img src="images/The_45_Day_Century_Egg_Glow_Up_-_Slide_1.webp" alt="Century egg transformation overview">
+        <div>
+          <p class="eyebrow">Visual Story</p>
+          <h2>The 45-Day Glow-Up of a Basic Egg</h2>
+          <p>Follow the transformation from plain duck egg to amber gel, green yolk, and pine-flower crystals.</p>
+          <span class="text-link">Open the timeline</span>
         </div>
       </a>
-    </div>
-    <!-- --- 2. 左列 — 标题列表 --- -->
-    <div class="block block-half block-link">
-      <div class="block-subtitle">Trending</div>
-      <div class="block-title">
-        <span class="block-icon">📋</span>
-        热门文章
-      </div>
-      <div class="block-mode-list">
-        <div class="list-item">
-          <span class="list-index">01</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">如何构建可复用的网站模板系统</span></a>
-            <div class="list-meta">2026-06-01 · 5 分钟阅读</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">02</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">CSS Grid 布局实战：从入门到精通</span></a>
-            <div class="list-meta">2026-05-28 · 8 分钟阅读</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">03</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">设计系统中的色彩与字体变量管理</span></a>
-            <div class="list-meta">2026-05-25 · 6 分钟阅读</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">04</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">响应式排版的最佳实践</span></a>
-            <div class="list-meta">2026-05-22 · 4 分钟阅读</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">05</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">从 Figma 到代码：设计规范的落地</span></a>
-            <div class="list-meta">2026-05-20 · 7 分钟阅读</div>
-          </div>
-        </div>
-      </div>
-      <div class="block-footer">
-        <a href="list.html">查看全部</a>
-      </div>
-    </div>
+      <a class="feature-card" href="detail.html">
+        <p class="eyebrow">Deep Dive</p>
+        <h3>The Science Behind Century Egg</h3>
+        <p>Alkaline hydrolysis, gelation, Maillard browning, and why it is not decay.</p>
+        <span class="text-link">Read the article</span>
+      </a>
+      <a class="feature-card" href="list.html">
+        <p class="eyebrow">Guide</p>
+        <h3>All Century Egg Chapters</h3>
+        <p>A tidy table of contents for the overview, timeline, science, and eating guide.</p>
+        <span class="text-link">Browse chapters</span>
+      </a>
+    </section>
 
-    <!--stage 1 to 4 end-->
-    
+    <section class="section eat-section">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">How to Eat It</p>
+        <h2>Do not start with a lonely black egg on a plate.</h2>
+      </div>
+      <div class="eat-grid">
+        <article>
+          <span>01</span>
+          <h3>Century egg tofu</h3>
+          <p>Cold silken tofu, century egg wedges, soy sauce, black vinegar, sesame oil, scallions. Beginner-friendly and fast.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Century egg congee</h3>
+          <p>Rice porridge softens the aroma and lets the yolk melt into the bowl. This is the comfort-food route.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ginger vinegar</h3>
+          <p>Sharp ginger and vinegar cut through the richness. Best once you already know what the egg tastes like.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <!-- --- 3. 右列 — 纯文本 --- -->
-    <div class="block block-half">
-      <div class="block-subtitle">About</div>
-      <div class="block-title">
-        <span class="block-icon">◇</span>
-        关于此模板
-      </div>
-      <div class="block-mode-text">
-        <p>这套通用界面模板使用纯 CSS Grid 实现两列布局。每个 <code>.block</code> 是一个独立的内容卡片，通过 <code>block-full</code> 跨两列合并，通过内部内容模式类切换显示形态。</p>
-        <p>CSS 变量体系（<code>:root</code>）将所有颜色、字体、间距参数集中管理，方便二次定制。支持暖色杂志风（#F7F3EC #C4956A）或任意主题色。</p>
-      </div>
-    </div>
-
-    <!-- --- 4. 左列 — 图文混排（图片在左） --- -->
-    <div class="block block-half block-link">
-      <div class="block-subtitle">Gallery</div>
-      <div class="block-title">
-        <span class="block-icon">▲</span>
-        视觉展示
-      </div>
-      <div class="block-mode-media media-image-left">
-        <div class="media-image">
-          <div class="img-placeholder">🖼 插画 600×400</div>
-        </div>
-        <div class="media-text">
-          <p>图文混排模式下，图片可居左或居右。此例为图片居左，文字在右侧自动排列。</p>
-          <p>图片区域支持 <code>object-fit: cover</code> 自适应裁剪，hover 时有微缩放动效。</p>
-          <div class="tags">
-            <span class="tag">布局</span>
-            <span class="tag">图文</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- --- 5. 右列 — 标题列表（紧凑模式） --- -->
-    <div class="block block-half block-link">
-      <div class="block-subtitle">Updates</div>
-      <div class="block-title">
-        <span class="block-icon">◎</span>
-        最新动态
-      </div>
-      <div class="block-mode-list list-compact">
-        <div class="list-item">
-          <span class="list-index">·</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">v2.0 发布：新增深色模式支持</span></a>
-            <div class="list-meta">3 小时前</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">·</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">文档站点迁移至新域名</span></a>
-            <div class="list-meta">昨天</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">·</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">社区插件市场正式上线</span></a>
-            <div class="list-meta">3 天前</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <span class="list-index">·</span>
-          <div class="list-content">
-            <a href="detail.html"><span class="list-title">2026 夏季 Roadmap 公开</span></a>
-            <div class="list-meta">1 周前</div>
-          </div>
-        </div>
-      </div>
-      <div class="block-footer">
-        <a href="list.html">更多动态</a>
-      </div>
-    </div>
-
-    <!-- --- 6. 跨列 — 纯文本，无图标简约版 --- -->
-    <div class="block block-full">
-      <div class="block-title">设计理念</div>
-      <div class="block-mode-text">
-        <p>这套模板基于"内容优先"的设计原则构建。所有视觉元素服务于内容表达，而非喧宾夺主。暖色基底（#F7F3EC）配合衬线/无衬线字体组合（Source Serif 4 + Inter），营造杂志般的阅读体验。</p>
-        <p>两列网格可根据内容需求自由组合：重要内容用 <code>block-full</code> 跨列突出，次要内容以 <code>block-half</code> 并排展示。移动端自动坍缩为单列流式布局。</p>
-        <p>每个 <code>.block</code> 内置三种内容模式自由切换，无需改动卡片容器本身。</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ========== 页脚 ========== -->
   <footer class="site-footer">
-    <div class="container">
-      <span class="footer-text">© 2026 CommonWeb Template</span>
-      <span class="footer-text">Built with Hermes</span>
-    </div>
+    <span class="footer-logo">WTF<span>eats</span></span>
+    <span>A field guide to misunderstood Chinese food</span>
   </footer>
-
 </body>
 </html>
