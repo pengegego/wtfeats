@@ -395,18 +395,21 @@ p, h1, h2, h3 { margin-top: 0; }
 .article-shell {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 34px 24px 80px;
+  padding: 24px 24px 80px;
 }
 .breadcrumb {
+  max-width: var(--max);
+  margin: 0 auto 18px;
+  padding: 24px 24px 0;
   display: flex;
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
   color: var(--muted);
   font-size: 13px;
-  margin-bottom: 18px;
 }
 .breadcrumb a { color: var(--amber-dark); font-weight: 700; }
+.article-shell .breadcrumb { padding: 0; }
 .detail-article { padding: 34px; }
 .article-header { max-width: 780px; }
 .article-header h1 { font-size: clamp(46px, 7vw, 88px); margin-bottom: 18px; }
