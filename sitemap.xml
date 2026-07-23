@@ -79,6 +79,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://wtfeats.com/luosifen/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wtfeats.com/luosifen/detail.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wtfeats.com/luosifen/stage.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wtfeats.com/luosifen/list.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wtfeats.com/about.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
