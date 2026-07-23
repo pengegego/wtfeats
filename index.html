@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WTFeats — A Field Guide to Misunderstood Chinese Food</title>
-<meta name="description" content="WTFeats is a field guide to misunderstood Chinese foods like century egg (pidan). Every food gets the explanation it deserves: history, chemistry, and craft — no fear-mongering, no exoticism.">
+<title>WTFeats — Explore Misunderstood Chinese Food</title>
+<meta name="description" content="Browse a visual field guide to misunderstood Chinese foods like century egg, stinky tofu, and silkworm pupa. History, science, and craft — no fear-mongering, no exoticism.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://wtfeats.com/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="WTFeats — A Field Guide to Misunderstood Chinese Food">
-<meta property="og:description" content="Chinese foods that look terrifying, taste incredible, and deserve a proper explanation. Start with the century egg.">
+<meta property="og:title" content="WTFeats — Explore Misunderstood Chinese Food">
+<meta property="og:description" content="A visual guide to Chinese foods that look terrifying, taste incredible, and deserve a proper explanation.">
 <meta property="og:image" content="https://wtfeats.com/images/centuryegg.webp">
 <meta property="og:url" content="https://wtfeats.com/">
 <meta property="og:type" content="website">
@@ -19,8 +19,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WTFeats — A Field Guide to Misunderstood Chinese Food">
-<meta name="twitter:description" content="Chinese foods that look terrifying, taste incredible, and deserve a proper explanation.">
+<meta name="twitter:title" content="WTFeats — Explore Misunderstood Chinese Food">
+<meta name="twitter:description" content="A visual guide to misunderstood Chinese foods.">
 <meta name="twitter:image" content="https://wtfeats.com/images/centuryegg.webp">
 
 <!-- Structured Data -->
@@ -30,116 +30,116 @@
   "@type": "WebSite",
   "name": "WTFeats",
   "url": "https://wtfeats.com/",
-  "description": "A field guide to misunderstood Chinese foods: history, chemistry, and craft explained without fear-mongering."
+  "description": "A visual field guide to misunderstood Chinese foods: history, chemistry, and craft explained without fear-mongering."
 }
 </script>
 
-<link rel="stylesheet" href="css/style.css?v=20260710a">
+<link rel="stylesheet" href="css/style.css?v=20260720c">
+<style>
+  .food-panels {
+    max-width: 1480px; margin: 0 auto;
+    padding: 0 24px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 860px) {
+    .food-panels { grid-template-columns: 1fr; max-width: 520px; }
+  }
+  .food-panel {
+    position: relative; display: flex; flex-direction: column;
+    min-height: 420px; border-radius: var(--radius);
+    overflow: hidden; text-decoration: none; color: #fff;
+    background-size: cover; background-position: center;
+    transition: transform .25s, box-shadow .25s;
+    box-shadow: var(--shadow-md);
+  }
+  .food-panel:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .food-panel-inner {
+    flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 32px 28px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.18) 30%, rgba(0,0,0,0.62) 62%, rgba(0,0,0,0.85) 100%);
+  }
+  .food-panel-label { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .food-panel-badge {
+    display: inline-block; padding: 5px 14px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; color: #fff;
+  }
+  .food-panel-num { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; opacity: 0.75; }
+  .food-panel-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 30px; font-weight: 700; line-height: 1.15;
+    letter-spacing: -0.02em; margin-bottom: 8px;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.45);
+  }
+  .food-panel-desc { font-size: 14px; line-height: 1.55; opacity: 0.92; max-width: 34ch; text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
+  .food-panel-cta {
+    margin-top: 16px; font-size: 13px; font-weight: 600;
+    opacity: 0.9; display: flex; align-items: center; gap: 6px;
+  }
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="logo" href="#">WTF<span>eats</span></a>
-  <div class="nav-right">
-    <span>About</span>
-    <span>All Foods</span>
-    <span class="nav-tag">What's this food?</span>
+<nav class="pin-nav">
+  <a class="pin-logo" href="#">WTF<span>eats</span></a>
+  <div style="flex:1"></div>
+  <div class="pin-nav-links" style="display:flex;align-items:center;gap:18px;">
+    <a href="centuryegg/">Century Egg</a>
+    <a href="tofu/">Stinky Tofu</a>
+    <a href="silkwormpupa/">Silkworm Pupa</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <div class="hero-count">2 foods documented — more coming</div>
-    <h1><span class="wtf">WTF</span><br>is that?</h1>
-    <p class="hero-desc">A field guide to Chinese foods that look terrifying, taste incredible, and deserve a proper explanation.</p>
-  </div>
-  <div class="hero-right">
-    <span class="hero-scroll-hint">Scroll</span>
-  </div>
+<div class="pin-hero">
+  <h1><span class="wtf">WTF</span> is that?</h1>
+  <p class="pin-hero-desc">A field guide to Chinese foods that look terrifying, taste incredible, and deserve a proper explanation.</p>
 </div>
 
-<!-- FOOD GRID -->
-<div class="grid-section">
-  <div class="grid-header">
-    <span class="grid-header-label">Foods documented</span>
-    <span class="grid-count">02 of more</span>
-  </div>
+<div class="food-panels">
 
-  <div class="food-grid">
-
-    <!-- Century Egg ACTIVE CARD -->
-    <a class="food-card card-pidan" href="/centuryegg/" style="background-image:url(images/centuryegg.webp);background-size:cover;background-position:center;">
-      <div class="card-pidan-inner">
-
-        <!-- bg image on card itself -->
-        
-        <div class="card-label">
-          <span class="card-badge">Now Available</span>
-          <span class="card-num">No. 001</span>
-        </div>
-
-        <div class="card-body">
-          <h2 class="card-title">The Century<br>Egg</h2>
-          <div class="card-desc">Not buried for a century. Not made with horse urine. Just 30 days of alkaline chemistry — and 1,300 years of history.</div>
-          <span class="card-cta">Read the full story →</span>
-        </div>
-
+  <a class="food-panel" href="centuryegg/" style="background-image:url(centuryegg/images/centuryegg.webp);">
+    <div class="food-panel-inner">
+      <div class="food-panel-label">
+        <span class="food-panel-badge" style="background:#B5652E;">No. 001</span>
+        <span class="food-panel-num">Now Available</span>
       </div>
-    </a>
+      <h2 class="food-panel-title">The Century<br>Egg</h2>
+      <p class="food-panel-desc">Not buried for a century. Not made with horse urine. Just 30 days of alkaline chemistry — and 1,300 years of history.</p>
+      <span class="food-panel-cta">Read the full story →</span>
+    </div>
+  </a>
 
-    <!-- Stinky Tofu -->
-    <a class="food-card card-pidan card-tofu" href="/tofu/" style="background-image:url(tofu/images/The_Science_of_Stinky_Tofu_-_Slide_1.webp);background-size:cover;background-position:center;">
-      <div class="card-pidan-inner">
-        <div class="card-label">
-          <span class="card-badge" style="background:#c0392b;">Now Available</span>
-          <span class="card-num">No. 002</span>
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Stinky<br>Tofu</h2>
-          <div class="card-desc">The smell is a trap. The taste is the prize. Fermented, fried, and served with pickled cabbage and chili.</div>
-          <span class="card-cta">Read the full story →</span>
-        </div>
+  <a class="food-panel" href="tofu/" style="background-image:url(tofu/images/The_Science_of_Stinky_Tofu_-_Slide_1.webp);">
+    <div class="food-panel-inner">
+      <div class="food-panel-label">
+        <span class="food-panel-badge" style="background:#c0392b;">No. 002</span>
+        <span class="food-panel-num">Now Available</span>
       </div>
-    </a>
+      <h2 class="food-panel-title">Stinky<br>Tofu</h2>
+      <p class="food-panel-desc">The smell is a trap. The taste is the prize. Fermented, fried, and served with pickled cabbage and chili.</p>
+      <span class="food-panel-cta">Read the full story →</span>
+    </div>
+  </a>
 
-  </div>
+  <a class="food-panel" href="silkwormpupa/" style="background-image:url(images/silkwormpupa.webp);">
+    <div class="food-panel-inner">
+      <div class="food-panel-label">
+        <span class="food-panel-badge" style="background:#C9A356;">No. 003</span>
+        <span class="food-panel-num">Now Available</span>
+      </div>
+      <h2 class="food-panel-title">Silkworm<br>Pupa</h2>
+      <p class="food-panel-desc">One pupa equals one egg. 76× the calcium of beef. A golden metamorphosis of unparalleled nutritional density.</p>
+      <span class="food-panel-cta">Read the full story →</span>
+    </div>
+  </a>
+
 </div>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat">
-    <div class="stat-num">1,300</div>
-    <div class="stat-label">Years of pidan history</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">25–30</div>
-    <div class="stat-label">Days to cure, not 100 years</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">0</div>
-    <div class="stat-label">Horses involved in production</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">∞</div>
-    <div class="stat-label">Western misconceptions, corrected</div>
-  </div>
-</div>
-
-<!-- MANIFESTO -->
-<div class="manifesto">
-  <div class="manifesto-label">Why this site exists</div>
-  <div class="manifesto-text">
-    Chinese food has been called disgusting on TV, ranked on "worst foods" lists, and reduced to shock content — by people who never understood what they were eating.<br><br>
-    <em>WTFeats</em> is a corrective. Every food here gets the explanation it deserves: the history, the chemistry, the craft. No fear-mongering. No exoticism. Just facts.
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <span class="footer-logo">WTF<span>eats</span></span>
-  <span>A field guide to misunderstood Chinese food</span>
+<footer class="pin-footer">
+  <div class="footer-logo">WTF<span>eats</span></div>
+  <p>A field guide to misunderstood Chinese food.</p>
 </footer>
 
 </body>
